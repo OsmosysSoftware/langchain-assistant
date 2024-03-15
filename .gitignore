@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# nenv
+langchain/
+
 # Distribution / packaging
 .Python
 build/
