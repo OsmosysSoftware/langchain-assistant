@@ -11,7 +11,7 @@ from langchain.prompts import PromptTemplate
 import getpass
 import os
 
-os.environ["OPENAI_API_KEY"] = getpass.getpass()
+os.environ["OPENAI_API_KEY"] = getpass.getpass(prompt='Enter your OpenAI Server Key:')
 
 loader = PyPDFLoader("Docs/employee-policy-handbook.pdf",extract_images=True)
 docs = loader.load()
