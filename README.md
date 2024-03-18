@@ -2,7 +2,7 @@
 
 Make sure you have python and pip installed 
 
-To run run these command
+To run these commands
 
 ```bash
 
