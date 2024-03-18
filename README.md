@@ -1,5 +1,6 @@
 # langchain-assistant
 
+## Prerequisites
 Make sure you have python and pip installed
 
 To check use these command
@@ -7,17 +8,20 @@ To check use these command
 python --version
 pip --version
 ```
+If Python or pip is not installed, please visit [Python's official website](https://www.python.org/downloads/) for installation instructions.
 
-To run these commands
+## Setup
+
+Run the following command to run the application
 
 ```bash
 
 python -m venv langchain
 
-#if using fish
+# If you are using the fish shell use this to activate virutal environment
 source langchain/bin/activate.fish
 
-#if using bash
+# If you are using the bash shell use this to activate virutal environment
 source langchain/bin/activate
 
 pip install --upgrade --quiet  langchain langchain-community langchainhub langchain-openai chromadb bs4 rapidocr-onnxruntime
@@ -26,4 +30,4 @@ python app.py
 
 ```
 
-During runtime, a prompt will appear requesting the OpenAI_Server_Key. Once provided, please enter the key in the designated field.
+During runtime, a prompt will appear requesting the OpenAI_Server_Key. You can obtain this key from your OpenAI account dashboard. Once provided, please enter the key in the designated field.
