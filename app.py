@@ -6,12 +6,10 @@ from langchain_core.runnables import RunnablePassthrough
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain.prompts import PromptTemplate
-
-
-import getpass
 import os
 
-os.environ["OPENAI_API_KEY"] = getpass.getpass(prompt='Enter your OpenAI Server Key:')
+os.environ["OPENAI_API_KEY"]  = os.getenv("OPENAI_API_KEY")
+
 
 loader = PyPDFLoader("Docs/employee-policy-handbook.pdf",extract_images=True)
 docs = loader.load()

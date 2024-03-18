@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-Make sure you have python and pip installed
+Make sure you have python(3.11.7) and pip(24.0) installed
 
 To check use these command
 
@@ -14,6 +14,8 @@ pip --version
 If Python or pip is not installed, please visit [Python's official website](https://www.python.org/downloads/) for installation instructions.
 
 ## Setup
+
+Update the .env file with the OpenAI_Server_Key. You can obtain this key from your OpenAI account dashboard
 
 Run the following command to run the application
 
@@ -32,5 +34,3 @@ pip install --upgrade --quiet  -r requirements.txt
 python app.py
 
 ```
-
-During runtime, a prompt will appear requesting the OpenAI_Server_Key. You can obtain this key from your OpenAI account dashboard. Once provided, please enter the key in the designated field.
