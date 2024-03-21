@@ -7,9 +7,10 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain.prompts import PromptTemplate
 import os
+import dotenv
 
-os.environ["OPENAI_API_KEY"]  = os.getenv("OPENAI_API_KEY")
-
+config = dotenv.dotenv_values(".env")
+os.environ["OPENAI_API_KEY"]= config['OPENAI_API_KEY']
 
 loader = PyPDFLoader("Docs/employee-policy-handbook.pdf",extract_images=True)
 docs = loader.load()
