@@ -15,7 +15,7 @@ os.environ["OPENAI_API_KEY"]= config['OPENAI_API_KEY']
 loader = PyPDFLoader("Docs/employee-policy-handbook.pdf",extract_images=True)
 docs = loader.load()
 
-text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200,add_start_index=True)
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=10000, chunk_overlap=2000,add_start_index=True)
 splits = text_splitter.split_documents(docs)
 
 vectorstore = Chroma.from_documents(documents=splits, embedding=OpenAIEmbeddings())
@@ -32,7 +32,7 @@ def format_docs(docs):
 template = """Act as an assistant for employee policies at Osmosys Software Solution. This is a software company. 
 Use the following pieces of context to answer the question at the end.
 If you don't know the answer, just say that you don't know, don't try to make up an answer.
-Use three sentences maximum and keep the answer as concise as possible.
+Keep the answer as concise as possible.
 Give me information in bullet format if there are multiple points.
 
 {context}
