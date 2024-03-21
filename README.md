@@ -29,7 +29,7 @@ source langchain/bin/activate.fish
 # If you are using the bash shell use this to activate virtual environment
 source langchain/bin/activate
 
-pip install --upgrade --quiet  -r requirement.txt
+pip install --upgrade --quiet  -r requirements.txt
 
 python app.py
 
